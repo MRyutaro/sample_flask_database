@@ -1,6 +1,6 @@
 # sample_flask_database
 
-Flask とデータベースを連携するためのテスト用レポジトリ
+Flaskとデータベースを連携するためのテスト用レポジトリ
 
 ## 機能
 
@@ -80,11 +80,11 @@ source .venv/bin/activate
 uv pip install -r requirements.txt
 
 # データベースの初期化
-flask db init
-flask db migrate -m "initial migration"
-flask db upgrade
+flask db init  # migrationsファイルを作成
+flask db migrate -m "initial migration"  # database.dbを作成
+flask db upgrade  # テーブルを作成
 
-# アプリケーションの起動（4プロセス）
+# アプリケーションの起動（4プロセス，標準出力）
 gunicorn -w 4 -b 0.0.0.0:8000 \
   --log-file - \
   --access-logfile - \
