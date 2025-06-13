@@ -1,0 +1,2 @@
+# sample_flask_database
+Flaskとデータベースを連携するためのテスト用レポジトリ
